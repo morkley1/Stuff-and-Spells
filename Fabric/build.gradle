@@ -55,6 +55,9 @@ dependencies {
     modImplementation("net.fabricmc:fabric-language-kotlin:1.7.4+kotlin.1.6.21")
     modImplementation "net.fabricmc:fabric-loader:${fabricLoaderVersion}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabricVersion}"
+    modImplementation "at.petra-k.paucal:paucal-fabric-$minecraftVersion:$paucalVersion"
+    modImplementation "at.petra-k.hexcasting:hexcasting-fabric-$minecraftVersion:$hexcastingVersion"
+    modImplementation "vazkii.patchouli:Patchouli:$minecraftVersion-$patchouliVersion-FABRIC"
 
     // Links in the Common project buildspace.
     compileOnly project(":Common")

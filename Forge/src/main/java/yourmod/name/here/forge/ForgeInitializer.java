@@ -83,6 +83,8 @@ public class ForgeInitializer {
         var modBus = getModEventBus();
         var evBus = MinecraftForge.EVENT_BUS;
 
+        modBus.addListener((FMLCommonSetupEvent evt) -> evt.enqueueWork(RegisterPatterns::registerPatterns));
+
         //modBus.register(ForgeClientInitializer.class);
 
         //modBus.addListener((FMLCommonSetupEvent evt) -> evt.enqueueWork(() -> {

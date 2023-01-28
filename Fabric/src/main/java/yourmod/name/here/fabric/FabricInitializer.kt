@@ -14,6 +14,8 @@ object FabricInitializer : ModInitializer {
         initListeners()
 
         initRegistries()
+
+        RegisterPatterns.registerPatterns()
     }
 
     fun initListeners() {
@@ -25,7 +27,7 @@ object FabricInitializer : ModInitializer {
     }
 
     fun initRegistries() {
-
+        
     }
 
     private fun <T> bind(registry: Registry<in T>): BiConsumer<T, ResourceLocation> =
