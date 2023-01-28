@@ -13,7 +13,7 @@ object OpScry : SpellOperator {
 		val pos = args.getChecked<Vec3>(0, argc)
 		val dir = args.getChecked<Vec3>(1, argc)
 		val time = args.getChecked<Double>(0, argc)
-		const val COST = (0.25 * ManaConstants.DUST_UNIT * time).toInt()
+		const val COST = (0.25 * ManaConstants.DUST_UNIT * time * (pos - ctx.caster.asActionResult.eyePosition).length()).toInt()
 		
 		return Triple(
 			Spell(pos),
